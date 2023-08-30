@@ -1,0 +1,163 @@
+body{
+    font-family: "Roboto Light", sans-serif;
+}
+
+
+/* Style the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header row styles */
+thead {
+  background-color: #f1f1f1;
+}
+
+thead th {
+  padding: 12px;
+  text-align: left;
+}
+
+/* Alternating row colors */
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #e0e0e0;
+}
+
+/* Cell padding and alignment */
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+/* Add borders to cells */
+td, th {
+  border: 1px solid #ccc;
+}
+
+/* Responsive table behavior */
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 10px;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  td {
+    display: block;
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 10px;
+    font-weight: bold;
+  }
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Style for the button */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Reset default form styling */
+form {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for the form container */
+form {
+    max-width: 400px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the form header */
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Style for the radio button container */
+label {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Style for the radio buttons */
+input[type="radio"] {
+    display: none;
+}
+
+/* Style for the radio button labels */
+label[for]:hover {
+    cursor: pointer;
+}
+
+/* Style for the selected radio button labels */
+input[type="radio"]:checked + label {
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Style for the submit button */
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+

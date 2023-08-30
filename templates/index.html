@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <title>Budget App</title>
+</head>
+<body>
+
+<h1>Budget App</h1>
+    <a href="/add">
+        <button>Add New</button>
+    </a>
+
+
+<div>
+    <table>
+        <tr>
+            <th>Currency</th>
+            <th>Amount</th>
+            <th>Date</th>
+            <th>Type</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Delete</th>
+        </tr>
+        {%  for trans in transaction %}
+        <tr>
+            <td>{{ trans.currency }}</td>
+            <td>{{ trans.amount }}</td>
+            <td>{{ trans.date_crated.date() }}</td>
+            <td>{{ trans.type }}</td>
+            <td>{{ trans.user_name }}</td>
+            <td>{{ trans.description }}</td>
+            <td style="text-align: center">
+                <a href="/delete/{{ trans.id }}">
+                    <i style="color: crimson" class="fa fa-trash fa-lg"></i>
+
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <td>Total: (in €)</td>
+            <td>{{ total }}</td>
+        </tr>
+    </table>
+<h3>Filter by type:</h3>
+<form action="" method="POST">
+    <input type="radio" id="all" name="expenseCategory" value="all">
+    <label for="all">All</label>
+    <input type="radio" id="clothes" name="expenseCategory" value="clothes">
+    <label for="clothes">Clothes</label>
+    <input type="radio" id="food" name="expenseCategory" value="food">
+    <label for="food">Food</label>
+    <input type="radio" id="cosmetics" name="expenseCategory" value="cosmetics">
+    <label for="cosmetics">Cosmetics</label>
+    <input type="radio" id="entertainment" name="expenseCategory" value="entertainment">
+    <label for="entertainment">Entertainment</label>
+    <input type="radio" id="children" name="expenseCategory" value="children">
+    <label for="children">Children</label>
+    <input type="radio" id="salary" name="expenseCategory" value="salary">
+    <label for="salary">Salary</label>
+    <input type="radio" id="otherCategory" name="expenseCategory" value="other">
+    <label for="otherCategory">Other</label><br><br>
+    <input type="submit" value="Submit">
+</form>
+</div>
+</body>
+</html>

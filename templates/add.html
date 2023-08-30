@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <title>Add New</title>
+</head>
+<body>
+<h1>Add new transaction</h1>
+
+<form action="" method="POST" style="margin: 0 auto">
+    <label for="age">Amount:</label>
+    <input type="number" id="amount" name="amount" min="0" max="99999" step=".01" required><br><br>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label>Transaction Category:</label>
+    <input type="radio" id="clothes" name="expenseCategory" value="clothes">
+    <label for="clothes">Clothes</label>
+    <input type="radio" id="food" name="expenseCategory" value="food">
+    <label for="food">Food</label>
+    <input type="radio" id="cosmetics" name="expenseCategory" value="cosmetics">
+    <label for="cosmetics">Cosmetics</label>
+    <input type="radio" id="entertainment" name="expenseCategory" value="entertainment">
+    <label for="entertainment">Entertainment</label>
+    <input type="radio" id="children" name="expenseCategory" value="children">
+    <label for="children">Children</label>
+    <input type="radio" id="salary" name="expenseCategory" value="salary">
+    <label for="salary">Salary</label>
+    <input type="radio" id="otherCategory" name="expenseCategory" value="other">
+    <label for="otherCategory">Other</label><br><br>
+
+    <label for="currency">Currency:</label>
+    <select id="currency" name="currency">
+      <option value="USD">USD</option>
+      <option value="SEK">SEK</option>
+      <option value="PLN">PLN</option>
+      <option value="NOK">NOK</option>
+      <option value="JPY">JPY</option>
+      <option value="HUF">HUF</option>
+      <option value="GBP">GBP</option>
+      <option value="DKK">DKK</option>
+      <option value="CZK">CZK</option>
+      <option value="CHF">CHF</option>
+      <option value="CAD">CAD</option>
+      <option value="BAM">BAM</option>
+      <option value="AUD">AUD</option>
+      <option value="EUR">EUR</option>
+    </select><br><br>
+
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" required><br><br>
+
+
+    <label for="name">Description:</label>
+    <br>
+    <textarea id="description" name="description" rows="3" cols="30">
+    </textarea><br><br>
+
+    <input type="submit" value="Submit"/>
+
+    <a href="/">
+        <button style="background-color: #333333" onclick="history.back()">Cancel</button>
+    </a>
+
+</form>
+
+</body>
+</html>
