@@ -89,7 +89,7 @@ def add():
         category = request.form['expenseCategory']
         currency = request.form['currency']
         date = request.form['date']
-        date = datetime.strptime(date, '%Y-%m-%dT%H:%M')
+        date = datetime.strptime(date, '%Y-%m-%d')
         description = request.form['description']
 
         newTransaction = Budget(
