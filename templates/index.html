@@ -10,9 +10,10 @@
 </head>
 <body>
 
-<h1>Budget App</h1>
-    <a href="/add">
-        <button>Add New</button>
+<a href="/" style="text-decoration: none">
+<h1 >Budget App</h1></a>
+    <a href="/add" >
+        <button style="margin-bottom: 30px">Add New</button>
     </a>
 
 
@@ -31,7 +32,7 @@
         <tr>
             <td>{{ trans.currency }}</td>
             <td>{{ trans.amount }}</td>
-            <td>{{ trans.date_crated.date() }}</td>
+            <td>{{ trans.date_crated.date().strftime("%d.%m.%Y") }}</td>
             <td>{{ trans.type }}</td>
             <td>{{ trans.user_name }}</td>
             <td>{{ trans.description }}</td>
@@ -48,8 +49,9 @@
             <td>{{ total }}</td>
         </tr>
     </table>
-<h3>Filter by type:</h3>
-<form action="" method="POST">
+
+<form action="" method="POST" style="margin-top: 30px">
+    <h3>Filter by type:</h3>
     <input type="radio" id="all" name="expenseCategory" value="all">
     <label for="all">All</label>
     <input type="radio" id="clothes" name="expenseCategory" value="clothes">
